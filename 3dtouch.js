@@ -53,8 +53,8 @@ function refreshForceValue() {
 
 // update the element according to the force value (between 0 and 1)
 function renderElement(forceValue) {
-  element.style.webkitTransform = 'translateX(-50%) translateY(-50%) scale(' + (1 + forceValue * 1.5) + ')';
-  background.style.webkitFilter = 'blur(' + forceValue * 30 + 'px)';
+  // element.style.webkitTransform = 'translateX(-50%) translateY(-50%) scale(' + (1 + forceValue * 1.5) + ')';
+  // background.style.webkitFilter = 'blur(' + forceValue * 30 + 'px)';
   forceValueOutput.innerHTML = 'Force: ' + forceValue.toFixed(4);
 }
 
