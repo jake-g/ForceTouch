@@ -2,6 +2,7 @@ var element = document.getElementById('forceMe');
 var forceValueOutput = document.getElementById('forceValue');
 var background = document.getElementById('background');
 var touch = null;
+// screen.orientation.lock('landscape');
 
 function onTouchStart(e) {
   e.preventDefault();
@@ -53,7 +54,7 @@ function refreshForceValue() {
 
 // update the element according to the force value (between 0 and 1)
 function renderElement(forceValue) {
-  element.style.webkitTransform = 'translateX(-50%) translateY(-50%) scale(' + (1 + forceValue * 2.2) + ')';
+  element.style.webkitTransform = 'translateX(-5%) translateY(-5%) scale(' + (1 + forceValue * 2.2) + ')';
   // background.style.webkitFilter = 'blur(' + forceValue * 30 + 'px)';
   forceValueOutput.innerHTML = 'Force: ' + forceValue.toFixed(4);
 }
