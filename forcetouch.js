@@ -32,10 +32,10 @@ function onTouchForceChange(e) {
   renderElement(e.changedTouches[0].force);
 }
 
-// the maximum force value of a click event is 3
-function onClickForceChange(e) {
-  renderElement(e.webkitForce / 3);
-}
+// // the maximum force value of a click event is 3
+// function onClickForceChange(e) {
+//   renderElement(e.webkitForce / 3);
+// }
 
 // iOS versions lower than iOS 10 do not support the touchforcechange event, so refresh manually
 function refreshForceValue() {
@@ -53,7 +53,7 @@ function refreshForceValue() {
 
 // update the element according to the force value (between 0 and 1)
 function renderElement(forceValue) {
-  // element.style.webkitTransform = 'translateX(-50%) translateY(-50%) scale(' + (1 + forceValue * 1.5) + ')';
+  element.style.webkitTransform = 'translateX(-50%) translateY(-50%) scale(' + (1 + forceValue * 1.5) + ')';
   // background.style.webkitFilter = 'blur(' + forceValue * 30 + 'px)';
   forceValueOutput.innerHTML = 'Force: ' + forceValue.toFixed(4);
 }
@@ -63,7 +63,6 @@ function addForceTouchToElement(elem) {
   elem.addEventListener('touchstart', onTouchStart, false);
   elem.addEventListener('touchmove', onTouchMove, false);
   elem.addEventListener('touchend', onTouchEnd, false);
-  elem.addEventListener('webkitmouseforcechanged', onClickForceChange, false);
   elem.addEventListener('touchforcechange', onTouchForceChange, false);
 }
 
