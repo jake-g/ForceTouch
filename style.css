@@ -37,12 +37,12 @@ h1 {
 }
 
 #forceMe {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background: rgba(255,255,255,0.7);
   border-radius: 100%;
   position: absolute;
-  top: 408px;
+  top: 330px;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transition: -webkit-transform .1s;
