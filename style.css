@@ -19,7 +19,7 @@ h1 {
   margin-bottom: 0;
 }
 
-#background {
+/*#background {
   position: absolute;
   top: 0;
   left: 50%;
@@ -34,18 +34,27 @@ h1 {
   background-size: 100% auto;
   transition: -webkit-filter .5s;
   z-index: -1;
-}
+}*/
 
 #forceMe {
-  width: 100px;
-  height: 100px;
-  background: rgba(255,255,255,0.7);
+  background: rgba(200, 200, 200, 0.7);
   border-radius: 100%;
-  position: absolute;;
-  bottom: 0px;
-  right: 0%;
-  -webkit-transform: translateX(-5%) translateY(-5%);
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  right: 24%;
   transition: -webkit-transform .1s;
+}
+
+@media (orientation: landscape) {
+  #forceMe {
+    width: 130px;
+    height: 130px;
+    bottom: -5%;
+    right: -5%;
+    /*-webkit-transform: translateX(0%) translateY(0%);*/
+  }
 }
 
 /*@media (min-width: 414px) {
